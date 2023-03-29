@@ -1,0 +1,19 @@
+import javax.swing.JOptionPane;
+
+public class P_JOptionpane {
+
+    public static void main(String[] args) {
+    
+        String nome = JOptionPane.showInputDialog("Informe o nome da empresa: ");
+        JOptionPane.showInputDialog(null, "A empresa cadastrada é: "+nome);
+        
+        String cnpj = JOptionPane.showInputDialog("Informe o CNPJ: ");
+        int cnpjint = Integer.parseInt(cnpj);
+        JOptionPane.showInputDialog(null, "O CNPJ cadastrado é: "+cnpjint);
+        
+        String fone = JOptionPane.showInputDialog("Informe o Telefone de contato: ");
+        int foneint = Integer.parseInt(fone);
+        JOptionPane.showInputDialog(null, "O telefone cadastrado para contato é: "+foneint);
+    }
+    
+}
