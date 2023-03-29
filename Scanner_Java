@@ -1,0 +1,25 @@
+import java.util.Scanner;
+
+public class Main_test {
+
+    public static void main(String[] args) {
+       Scanner sca = new Scanner(System.in);
+       System.out.println("Informe seu cpf: ");
+       int cpf = sca.nextInt();
+       System.out.println("Informe seu nome: ");
+       String nome = sca.nextLine();
+       System.out.println("Informe sua idade: ");
+       int idade = sca.nextInt();
+       System.out.println("Informe seu endereço: ");
+       String ende = sca.nextLine();
+       
+       System.out.println("Cpf cadastrado: " +cpf
+                           +"\n Nome cadastrado: " +nome
+                           +"\n Idade cadastrada: " +idade
+                           +"\n Endereço cadastro: " +ende);
+       
+       
+    }
+    
+}
+
