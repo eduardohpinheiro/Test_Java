@@ -1,9 +1,9 @@
 # Test_Java
 public class Fatura {
-    public String numero;
-    public  String descricao;
-    public  int quantidade;
-    public  double preco;
+    private String numero;
+    private  String descricao;
+    private  int quantidade;
+    private  double preco;
     
     public Fatura(String numero, String descricao, int quantidade, double preco) {
         this.numero = numero;
