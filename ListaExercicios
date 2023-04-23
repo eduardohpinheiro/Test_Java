@@ -1,0 +1,84 @@
+public class Animal {
+    private String nome;
+    private double peso;
+
+    public Animal(String nome, double peso) {
+        this.nome = nome;
+        this.peso = peso;
+    }
+
+    public String getNome() {
+        return nome;
+    }
+
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
+
+    public double getPeso() {
+        return peso;
+    }
+
+    public void setPeso(double peso) {
+        this.peso = peso;
+    }
+
+    public String toString() {
+        return "Nome: " + nome + ", Peso: " + peso;
+    }
+}
+
+public class Cachorro extends Animal {
+    private String raca;
+
+    public Cachorro(String nome, double peso, String raca) {
+        super(nome, peso);
+        this.raca = raca;
+    }
+
+    public String getRaca() {
+        return raca;
+    }
+
+    public void setRaca(String raca) {
+        this.raca = raca;
+    }
+
+    public String toString() {
+        return super.toString() + ", Raça: " + raca;
+    }
+}
+
+public class Peixe extends Animal {
+    private String tipoHabitat;
+
+    public Peixe(String nome, double peso, String tipoHabitat) {
+        super(nome, peso);
+        this.tipoHabitat = tipoHabitat;
+    }
+
+    public String getTipoHabitat() {
+        return tipoHabitat;
+    }
+
+    public void setTipoHabitat(String tipoHabitat) {
+        this.tipoHabitat = tipoHabitat;
+    }
+
+    public String toString() {
+        return super.toString() + ", Tipo de Habitat: " + tipoHabitat;
+    }
+}
+
+public class Teste {
+    public static void main(String[] args) {
+        Animal animal = new Animal("Animal", 10.5);
+        System.out.println(animal.toString());
+
+        Cachorro cachorro = new Cachorro("Cachorro", 15.2, "Poodle");
+        System.out.println(cachorro.toString());
+
+        Peixe peixe = new Peixe("Peixe", 0.3, "Água Doce");
+        System.out.println(peixe.toString());
+    }
+}
