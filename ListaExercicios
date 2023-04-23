@@ -217,5 +217,272 @@ public class Gerente extends Empregado {
 public class Vendedor extends Empregado {
     private double valorVendas;
     private int qntVendas;
+    
+//Exercicio 3.
 
-   
+public class Pessoa {
+    private String nome;
+    private String endereco;
+    private String telefone;
+
+    public Pessoa(String nome, String endereco, String telefone) {
+        this.nome = nome;
+        this.endereco = endereco;
+        this.telefone = telefone;
+    }
+
+    public String getNome() {
+        return nome;
+    }
+
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
+
+    public String getEndereco() {
+        return endereco;
+    }
+
+    public void setEndereco(String endereco) {
+        this.endereco = endereco;
+    }
+
+    public String getTelefone() {
+        return telefone;
+    }
+
+    public void setTelefone(String telefone) {
+        this.telefone = telefone;
+    }
+}
+
+public class Fornecedor extends Pessoa {
+    private double valorCredito;
+    private double valorDivida;
+
+    public Fornecedor(String nome, String endereco, String telefone, double valorCredito, double valorDivida) {
+        super(nome, endereco, telefone);
+        this.valorCredito = valorCredito;
+        this.valorDivida = valorDivida;
+    }
+
+    public double getValorCredito() {
+        return valorCredito;
+    }
+
+    public void setValorCredito(double valorCredito) {
+        this.valorCredito = valorCredito;
+    }
+
+    public double getValorDivida() {
+        return valorDivida;
+    }
+
+    public void setValorDivida(double valorDivida) {
+        this.valorDivida = valorDivida;
+    }
+
+    public double obterSaldo() {
+        return valorCredito - valorDivida;
+    }
+}
+
+public class Empregado extends Pessoa {
+    private int codigoSetor;
+    private double salarioBase;
+    private double imposto;
+
+    public Empregado(String nome, String endereco, String telefone, int codigoSetor, double salarioBase, double imposto) {
+        super(nome, endereco, telefone);
+        this.codigoSetor = codigoSetor;
+        this.salarioBase = salarioBase;
+        this.imposto = imposto;
+    }
+
+    public int getCodigoSetor() {
+        return codigoSetor;
+    }
+
+    public void setCodigoSetor(int codigoSetor) {
+        this.codigoSetor = codigoSetor;
+    }
+
+    public double getSalarioBase() {
+        return salarioBase;
+    }
+
+    public void setSalarioBase(double salarioBase) {
+        this.salarioBase = salarioBase;
+    }
+
+    public double getImposto() {
+        return imposto;
+    }
+
+    public void setImposto(double imposto) {
+        this.imposto = imposto;
+    }
+
+    public double calcularSalario() {
+        double salarioLiquido = salarioBase * (1 - imposto/100);
+        return salarioLiquido;
+    }
+}
+
+public class Cliente extends Pessoa {
+    private double valorDivida;
+    private int anoNascimento;
+
+    public Cliente(String nome, String endereco, String telefone, double valorDivida, int anoNascimento) {
+        super(nome, endereco, telefone);
+        this.valorDivida = valorDivida;
+        this.anoNascimento = anoNascimento;
+    }
+
+    public double getValorDivida() {
+        return valorDivida;
+    }
+
+    public void setValorDivida(double valorDivida) {
+        this.valorDivida = valorDivida;
+    }
+
+    public int getAnoNascimento() {
+        return anoNascimento;
+    }
+
+    public void setAn
+    
+//Exercicio 4.
+   public class Time {
+    private String nomeTime;
+    private int titulos;
+    private String maiorRival;
+
+    public Time(String nomeTime, int titulos, String maiorRival) {
+        this.nomeTime = nomeTime;
+        this.titulos = titulos;
+        this.maiorRival = maiorRival;
+    }
+
+    public String getNomeTime() {
+        return nomeTime;
+    }
+
+    public void setNomeTime(String nomeTime) {
+        this.nomeTime = nomeTime;
+    }
+
+    public int getTitulos() {
+        return titulos;
+    }
+
+    public void setTitulos(int titulos) {
+        this.titulos = titulos;
+    }
+
+    public String getMaiorRival() {
+        return maiorRival;
+    }
+
+    public void setMaiorRival(String maiorRival) {
+        this.maiorRival = maiorRival;
+    }
+
+    public String toString() {
+        return "Time{" +
+                "nomeTime='" + nomeTime + '\'' +
+                ", titulos=" + titulos +
+                ", maiorRival='" + maiorRival + '\'' +
+                '}';
+    }
+}
+
+public class Jogador {
+    private String nome;
+    private int idade;
+    private String posicao;
+
+    public Jogador(String nome, int idade, String posicao) {
+        this.nome = nome;
+        this.idade = idade;
+        this.posicao = posicao;
+    }
+
+    public String getNome() {
+        return nome;
+    }
+
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
+
+    public int getIdade() {
+        return idade;
+    }
+
+    public void setIdade(int idade) {
+        this.idade = idade;
+    }
+
+    public String getPosicao() {
+        return posicao;
+    }
+
+    public void setPosicao(String posicao) {
+        this.posicao = posicao;
+    }
+
+    public String toString() {
+        return "Jogador{" +
+                "nome='" + nome + '\'' +
+                ", idade=" + idade +
+                ", posicao='" + posicao + '\'' +
+                '}';
+    }
+}
+
+public class Estadio {
+    private int capacidade;
+    private String nome;
+    private String tipoGramado;
+
+    public Estadio(int capacidade, String nome, String tipoGramado) {
+        this.capacidade = capacidade;
+        this.nome = nome;
+        this.tipoGramado = tipoGramado;
+    }
+
+    public int getCapacidade() {
+        return capacidade;
+    }
+
+    public void setCapacidade(int capacidade) {
+        this.capacidade = capacidade;
+    }
+
+    public String getNome() {
+        return nome;
+    }
+
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
+
+    public String getTipoGramado() {
+        return tipoGramado;
+    }
+
+    public void setTipoGramado(String tipoGramado) {
+        this.tipoGramado = tipoGramado;
+    }
+
+    public String toString() {
+        return "Estadio{" +
+                "capacidade=" + capacidade +
+                ", nome='" + nome + '\'' +
+                ", tipoGramado='" + tipoGramado + '\'' +
+                '}';
+    }
+}
+
